@@ -9,11 +9,8 @@ function simulate(trials) {
         let die = Math.floor(Math.random()*6)+1
         if (die === 7) die -= 1;
         
-        let c1 = cards[Math.floor(Math.random()*cards.length)];
-        let card1 = c1 > 0 ? c1 : 1;
-
-        let c2 = die%2 === 0 ? cards[Math.floor(Math.random()*cards.length)] : 0;
-
+        let card1 = cards[Math.floor(Math.random()*cards.length)];
+        let card2 = die%2 === 0 ? cards[Math.floor(Math.random()*cards.length)] : 0;
         let total = (card1 + card2) - die;
         display(i,die,card1,card2,total);
     }
